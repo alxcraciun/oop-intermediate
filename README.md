@@ -1,1 +1,1 @@
-# oop_practice_02
+# OOP Intermediate Project
