@@ -36,7 +36,7 @@ std::istream& operator>>(std::istream& stream, Persoana& obj)
 
 std::ostream& operator<<(std::ostream& stream, const Persoana& obj)
 {
-  stream << obj.nume << "are ID-ul " << obj.id << std::endl;
+  stream << "Persoana '"<< obj.nume << "' are ID-ul " << obj.id << std::endl;
   return stream;
 }
 
