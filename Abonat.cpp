@@ -34,7 +34,7 @@ void Abonat::show()
 
 std::string Abonat::getName()
 {
-  return this->nume;
+  return nume;
 }
 
 Abonat& Abonat::operator=(const Abonat& other)

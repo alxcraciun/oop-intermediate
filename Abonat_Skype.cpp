@@ -28,13 +28,13 @@ Abonat_Skype::~Abonat_Skype()
 
 std::string Abonat_Skype::getName()
 {
-  return this->nume;
+  return nume;
 }
 
 void Abonat_Skype::show()
 {
   std::cout << "Persoana '"<< nume << "' are ID-ul " << id << std::endl;
-  std::cout << "Fiind Abonat Skype, are nr. telefon: " << nr_telefon << "si id_skype: " << id_skype << std::endl;
+  std::cout << "Fiind Abonat Skype, are: \nNr. Telefon: " << nr_telefon << "\nID Skype: " << id_skype << std::endl;
 }
 
 Abonat_Skype& Abonat_Skype::operator=(const Abonat_Skype& other)
@@ -81,7 +81,7 @@ std::istream& operator>>(std::istream& stream, Abonat_Skype& obj)
 std::ostream& operator<<(std::ostream& stream, const Abonat_Skype& obj)
 {
   stream << "Persoana '"<< obj.nume << "' are ID-ul " << obj.id << std::endl;
-  stream << "Fiind Abonat Skype, are nr. telefon: " << obj.nr_telefon << "si id_skype: " << obj.id_skype << std::endl;
+  stream << "Fiind Abonat Skype, are: \nNr. Telefon: " << obj.nr_telefon << "\nID Skype: " << obj.id_skype << std::endl;
 
   return stream;
 }
