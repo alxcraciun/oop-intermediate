@@ -29,7 +29,7 @@ Abonat::~Abonat()
 void Abonat::show()
 {
   std::cout << "Persoana '" << nume << "' are ID-ul " << id << std::endl;
-  std::cout << " are nr de telefon: " << this->nr_telefon << '\n';
+  std::cout << "Fiind Abonat Skype, are nr. telefon " << this->nr_telefon << '\n';
 }
 
 std::string Abonat::getName()
