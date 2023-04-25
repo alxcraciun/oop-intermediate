@@ -13,6 +13,8 @@ public:
   Persoana(const Persoana& other);
   virtual ~Persoana();
 
+  virtual void show() = 0;
+
   Persoana& operator=(const Persoana& other);
   friend std::istream& operator>>(std::istream& stream, Persoana& obj);
   friend std::ostream& operator<<(std::ostream& stream, const Persoana& obj);

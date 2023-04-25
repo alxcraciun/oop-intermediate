@@ -1,7 +1,7 @@
 #pragma once
 #include "Abonat_Skype.h"
 
-class Abonat_Skype_Romania : Abonat_Skype
+class Abonat_Skype_Romania : public Abonat_Skype
 {
 protected:
   std::string adresa_mail;

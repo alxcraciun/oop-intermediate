@@ -1,7 +1,7 @@
 #pragma once
 #include "Abonat_Skype.h"
 
-class Abonat_Skype_Extern : Abonat_Skype
+class Abonat_Skype_Extern : public Abonat_Skype
 {
   std::string tara;
 

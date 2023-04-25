@@ -1,5 +1,6 @@
 #pragma once
 #include "Persoana.h"
+#include <typeinfo>
 
 class Abonat : public Persoana
 {
@@ -13,7 +14,7 @@ public:
   Abonat(const Abonat& other);
   virtual ~Abonat();
 
-  virtual void show();
+  virtual void show() override;
   virtual std::string getName();
 
   Abonat& operator=(const Abonat& other);
