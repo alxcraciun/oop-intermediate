@@ -5,13 +5,15 @@
 #include "include/Persoana.h"
 #include <iostream>
 
-int main()
-{
   std::string open;
   int input;
-  Agenda agenda;
 
-  std::cout << "Intra in aplicatie? Y/N\n";
+  Agenda agenda;
+  int Agenda::nr_abonati = 0;
+
+int main()
+{
+  std::cout << "Intra in aplicatie? Y/N\n\n";
 
   std::cin >> open;
   while (open != "Y")

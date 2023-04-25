@@ -4,7 +4,6 @@
 
 Agenda::Agenda()
 {
-  nr_abonati = 0;
 }
 
 Agenda::~Agenda()
