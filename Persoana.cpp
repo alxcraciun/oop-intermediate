@@ -25,11 +25,9 @@ std::istream& operator>>(std::istream& stream, Persoana& obj)
 {
   std::cout << "ID: ";
   stream >> obj.id;
-  std::cout << std::endl;
 
   std::cout << "Nume: ";
   stream >> obj.nume;
-  std::cout << std::endl;
 
   return stream;
 }

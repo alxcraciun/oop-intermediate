@@ -1,6 +1,5 @@
 #pragma once
 #include "include/Agenda.h"
-#include <stdexcept>
 
 Agenda::Agenda()
 {
@@ -18,21 +17,25 @@ void Agenda::show()
     std::cout << counter << ")\n";
     if (typeid(*i) == typeid(Abonat_Skype))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype*>(i);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype*>(i);
       aux->show();
     }
     else if (typeid(*i) == typeid(Abonat_Skype_Romania))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Romania*>(i);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype_Romania*>(i);
       aux->show();
     }
     else if (typeid(*i) == typeid(Abonat_Skype_Extern))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Extern*>(i);
+      Abonat* aux; 
+      aux = dynamic_cast<Abonat_Skype_Extern*>(i);
       aux->show();
     }
     else
       std::cout << *i;
+    counter += 1;
   }
 }
 
@@ -44,28 +47,28 @@ int Agenda::getLungime()
 Agenda& Agenda::operator+=(const Abonat& other_abonat)
 {
   nr_abonati++;
-  lista_abonati.push_back(new Abonat());
+  lista_abonati.push_back(new Abonat(other_abonat));
   return *this;
 }
 
 Agenda& Agenda::operator+=(const Abonat_Skype& other_abonat)
 {
   nr_abonati++;
-  lista_abonati.push_back(new Abonat_Skype());
+  lista_abonati.push_back(new Abonat_Skype(other_abonat));
   return *this;
 }
 
 Agenda& Agenda::operator+=(const Abonat_Skype_Extern& other_abonat)
 {
   nr_abonati++;
-  lista_abonati.push_back(new Abonat_Skype_Extern());
+  lista_abonati.push_back(new Abonat_Skype_Extern(other_abonat));
   return *this;
 }
 
 Agenda& Agenda::operator+=(const Abonat_Skype_Romania& other_abonat)
 {
   nr_abonati++;
-  lista_abonati.push_back(new Abonat_Skype_Romania());
+  lista_abonati.push_back(new Abonat_Skype_Romania(other_abonat));
   return *this;
 }
 
@@ -77,7 +80,9 @@ Agenda& Agenda::operator[](const std::string& other_nume)
   {
     if (typeid(*x) == typeid(Abonat_Skype_Extern))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Extern*>(x);
+      Abonat* aux;
+      // aux = dynamic_pointer_cast<Abonat_Skype_Extern>(x);
+      aux = dynamic_cast<Abonat_Skype_Extern*>(x);
       if (aux->getName() == other_nume)
       {
         found = true;
@@ -87,7 +92,8 @@ Agenda& Agenda::operator[](const std::string& other_nume)
     }
     else if (typeid(*x) == typeid(Abonat_Skype_Romania))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Romania*>(x);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype_Romania*>(x);
       if (aux->getName() == other_nume)
       {
         found = 1;
@@ -97,7 +103,8 @@ Agenda& Agenda::operator[](const std::string& other_nume)
     }
     else if (typeid(*x) == typeid(Abonat_Skype))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype*>(x);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype*>(x);
       if (aux->getName() == other_nume)
       {
         found = true;
@@ -130,21 +137,26 @@ std::ostream& operator<<(std::ostream& stream, const Agenda& obj)
     stream << counter << ")\n";
     if (typeid(*i) == typeid(Abonat_Skype))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype*>(i);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype*>(i);
       aux->show();
     }
     else if (typeid(*i) == typeid(Abonat_Skype_Romania))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Romania*>(i);
+      Abonat* aux; 
+      aux = dynamic_cast<Abonat_Skype_Romania*>(i);
       aux->show();
     }
     else if (typeid(*i) == typeid(Abonat_Skype_Extern))
     {
-      Abonat* aux = dynamic_cast<Abonat_Skype_Extern*>(i);
+      Abonat* aux;
+      aux = dynamic_cast<Abonat_Skype_Extern*>(i);
       aux->show();
     }
     else
       stream << *i;
+    
+    counter += 1;
   }
 
   return stream;

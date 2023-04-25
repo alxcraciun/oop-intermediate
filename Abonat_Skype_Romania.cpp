@@ -52,32 +52,31 @@ std::istream& operator>>(std::istream& stream, Abonat_Skype_Romania& obj)
   stream >> obj.nr_telefon;
 
   if (obj.nr_telefon[0] != '0' || obj.nr_telefon.size() < 10 || obj.nr_telefon.size() > 10)
+  {
     throw std::invalid_argument("Eroare: Numarul de telefon este invalid\n");
+    return stream;
+  }
 
   std::cout << "ID: ";
   stream >> obj.id;
-  std::cout << std::endl;
 
   std::cout << "Nume: ";
   stream >> obj.nume;
-  std::cout << std::endl;
 
   for (int i = 0; i < obj.nume.size(); i++)
   {
-    if (obj.nume[i] >= '0' || obj.nume[i] <= '9')
+    if (obj.nume[i] >= '0' && obj.nume[i] <= '9')
       throw std::invalid_argument("Numele introdus este invalid, introduceti doar caractere ale alfabetului englez\n");
 
-    else if (!((obj.nume[i] <= 'a' && obj.nume[i] >= 'z') || (obj.nume[i] >= 'A' && obj.nume[i] <= 'Z') || (obj.nume[i] == ' ')))
+    else if (!((obj.nume[i] >= 'a' && obj.nume[i] <= 'z') || (obj.nume[i] >= 'A' && obj.nume[i] <= 'Z') || (obj.nume[i] == ' ')))
       throw std::invalid_argument("Numele introdus este invalid, introduceti doar caractere ale alfabetului englez\n");
   }
   
   std::cout << "ID Skype: ";
   stream >> obj.id_skype;
-  std::cout << std::endl;
 
   std::cout << "Adresa Mail: ";
   stream >> obj.adresa_mail;
-  std::cout << std::endl;
 
   int counter = 0;
   for (int i = 0; i < obj.adresa_mail.size(); i++)
@@ -85,7 +84,10 @@ std::istream& operator>>(std::istream& stream, Abonat_Skype_Romania& obj)
       counter++;
   
   if(counter != 1) 
+  {
     throw std::invalid_argument("Adresa de mail este invalida\n");
+    return stream;
+  }
 
   return stream;
 }

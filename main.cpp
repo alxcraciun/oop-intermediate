@@ -5,39 +5,38 @@
 #include "include/Persoana.h"
 #include <iostream>
 
-  std::string open;
-  int input;
+std::string open;
+int input;
 
-  Agenda agenda;
-  int Agenda::nr_abonati = 0;
+Agenda agenda;
+int Agenda::nr_abonati = 0;
 
 int main()
 {
-  std::cout << "Intra in aplicatie? Y/N\n\n";
-
-  std::cin >> open;
-  while (open != "Y")
+  std::cout << "Intra in aplicatie? Y/N\n";
+  while (std::cin >> open)
   {
     if (open == "N")
     {
-      std::cout << "Program finalizata!";
+      std::cout << "Program finalizat!";
       return 0;
     }
-    else
+    else if (open != "Y")
     {
       std::cout << "Optiune invalida. Apasati doar tasta 'Y' sau 'N'\n";
-      std::cin >> open;
       continue;
     }
 
-    system("cls");
+    std::cout << std::endl;
     std::cout << "1) Adauga un abonat \n";
     std::cout << "2) Adauga un abonat pe Skype \n";
     std::cout << "3) Adauga un abonat pe Skype din Romania \n";
     std::cout << "4) Adauga un abonat pe Skype din alta tara.\n";
     std::cout << "5) Cauta un abonat deja existent \n";
-    std::cout << "6) Afiseaza lista cu toti abonatii \n";
+    std::cout << "6) Afiseaza lista cu toti abonatii \n\n";
+
     std::cin >> input;
+    std::cout << std::endl;
 
     switch (input)
     {
@@ -53,6 +52,7 @@ int main()
       {
         std::cout << "EROARE! " << err.what() << "Nu s-a reusit introducera abonatului in agenda.\n";
       }
+      break;
     }
     case 2:
     {
@@ -66,6 +66,7 @@ int main()
       {
         std::cout << "EROARE! " << err.what() << "Nu s-a reusit introducera abonatului in agenda.\n";
       }
+      break;
     }
     case 3:
     {
@@ -79,6 +80,7 @@ int main()
       {
         std::cout << "EROARE! " << err.what() << "Nu s-a reusit introducera abonatului in agenda.\n";
       }
+      break;
     }
     case 4:
     {
@@ -92,6 +94,7 @@ int main()
       {
         std::cout << "EROARE! " << err.what() << "Nu s-a reusit introducera abonatului in agenda.\n";
       }
+      break;
     }
     case 5:
     {
@@ -100,15 +103,13 @@ int main()
         std::cout << "Introduce numele: ";
         std::string nume;
         std::cin >> nume;
-        for (int i = 0; i < nume.size(); i++)
-          if (!(nume[i] >= 'a' && nume[i] <= 'z') || (nume[i] >= 'A' && nume[i] <= 'Z'))
-            throw std::invalid_argument("Numele introdus este invalid\n");
         agenda[nume];
       }
       catch (std::exception& err)
       {
         std::cout << "EROARE! " << err.what();
       }
+      break;
     }
     case 6:
     {
@@ -116,14 +117,15 @@ int main()
         std::cout << "Nu exista angajati in agenda.\n";
       else
         agenda.show();
+      break;
     }
     default:
     {
-      std::cout << "Optiunea introdusa este gresita.\n\n";
+      std::cout << "Optiunea introdusa este gresita.\n";
     }
     }
+
     std::cout << "Doriti sa continuati? Y/N\n";
-    std::cin >> open;
   }
 
   return 0;
