@@ -1,4 +1,5 @@
 #pragma once
+#include "Abonat.h"
 #include "Abonat_Skype.h"
 #include "Abonat_Skype_Extern.h"
 #include "Abonat_Skype_Romania.h"
