@@ -10,11 +10,11 @@ protected:
 public:
   Persoana();
   Persoana(int id, const std::string nume);
-  Persoana(const Persoana &other);
+  Persoana(const Persoana& other);
   virtual ~Persoana();
 
-  Persoana &operator=(const Persoana &other);
+  Persoana& operator=(const Persoana& other);
 
-  friend std::istream &operator>>(std::istream &in, Persoana &obj);
-  friend std::ostream &operator<<(std::ostream &out, const Persoana &obj);
+  friend std::istream& operator>>(std::istream& in, Persoana& obj);
+  friend std::ostream& operator<<(std::ostream& out, const Persoana& obj);
 };
