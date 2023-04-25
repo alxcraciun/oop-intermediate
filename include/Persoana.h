@@ -9,7 +9,7 @@ protected:
 
 public:
   Persoana();
-  Persoana(int id, const std::string nume);
+  Persoana(int id, const std::string other_nume);
   Persoana(const Persoana& other);
   virtual ~Persoana();
 

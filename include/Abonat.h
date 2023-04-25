@@ -8,8 +8,8 @@ protected:
 
 public:
   Abonat();
-  Abonat(const std::string nr_telefon, const int id, const std::string nume);
-  Abonat(const std::string nr_telefon, const Persoana& persoana);
+  Abonat(const std::string other_nr_telefon, const int other_id, const std::string other_nume);
+  Abonat(const std::string other_nr_telefon, const Persoana& other_persoana);
   Abonat(const Abonat& other);
   virtual ~Abonat();
 

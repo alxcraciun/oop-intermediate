@@ -8,8 +8,8 @@ protected:
 
 public:
   Abonat_Skype();
-  Abonat_Skype(const std::string id_skype, const std::string nr_telefon, const int id, const std::string nume);
-  Abonat_Skype(const std::string id_skype, const Abonat& abonat);
+  Abonat_Skype(const std::string other_id_skype, const std::string other_nr_telefon, const int other_id, const std::string other_nume);
+  Abonat_Skype(const std::string other_id_skype, const Abonat& other_abonat);
   Abonat_Skype(const Abonat_Skype& other);
   virtual ~Abonat_Skype();
 
