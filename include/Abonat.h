@@ -17,6 +17,6 @@ public:
   virtual std::string getName();
 
   Abonat& operator=(const Abonat& other);
-  friend std::istream& operator>>(std::istream& in, Abonat& obj);
-  friend std::ostream& operator<<(std::ostream& out, const Abonat& obj);
+  friend std::istream& operator>>(std::istream& stream, Abonat& obj);
+  friend std::ostream& operator<<(std::ostream& stream, const Abonat& obj);
 };

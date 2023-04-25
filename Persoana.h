@@ -13,6 +13,6 @@ public:
 
   Persoana &operator=(const Persoana &other);
 
-  friend std::istream &operator>>(std::istream &in, Persoana &persoana);
-  friend std::ostream &operator<<(std::ostream &out, const Persoana &persoana);
+  friend std::istream &operator>>(std::istream &stream, Persoana &persoana);
+  friend std::ostream &operator<<(std::ostream &stream, const Persoana &persoana);
 };

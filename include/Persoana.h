@@ -15,6 +15,6 @@ public:
 
   Persoana& operator=(const Persoana& other);
 
-  friend std::istream& operator>>(std::istream& in, Persoana& obj);
-  friend std::ostream& operator<<(std::ostream& out, const Persoana& obj);
+  friend std::istream& operator>>(std::istream& stream, Persoana& obj);
+  friend std::ostream& operator<<(std::ostream& stream, const Persoana& obj);
 };

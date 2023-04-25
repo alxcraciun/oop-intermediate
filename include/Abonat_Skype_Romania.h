@@ -17,6 +17,6 @@ public:
   std::string getName() override;
 
   Abonat_Skype_Romania& operator=(const Abonat_Skype_Romania& other);
-  friend std::istream& operator>>(std::istream& in, Abonat_Skype_Romania& obj);
-  friend std::ostream& operator<<(std::ostream& out, const Abonat_Skype_Romania& obj);
+  friend std::istream& operator>>(std::istream& stream, Abonat_Skype_Romania& obj);
+  friend std::ostream& operator<<(std::ostream& stream, const Abonat_Skype_Romania& obj);
 };

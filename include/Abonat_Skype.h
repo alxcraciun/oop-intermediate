@@ -17,6 +17,6 @@ public:
   void show() override;
 
   Abonat_Skype& operator=(const Abonat_Skype& other);
-  friend std::istream& operator>>(std::istream& in, Abonat_Skype& obj);
-  friend std::ostream& operator<<(std::ostream& out, const Abonat_Skype& obj);
+  friend std::istream& operator>>(std::istream& stream, Abonat_Skype& obj);
+  friend std::ostream& operator<<(std::ostream& stream, const Abonat_Skype& obj);
 };
