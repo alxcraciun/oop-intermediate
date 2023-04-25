@@ -5,13 +5,13 @@ Abonat::Abonat()
 }
 
 Abonat::Abonat(const std::string other_nr_telefon, const int id, const std::string nume)
-    : Persoana(id, nume)
+  : Persoana(id, nume)
 {
   nr_telefon = other_nr_telefon;
 }
 
 Abonat::Abonat(const std::string other_nr_telefon, const Persoana& other_persoana)
-    : Persoana(other_persoana)
+  : Persoana(other_persoana)
 {
   nr_telefon = other_nr_telefon;
 }
@@ -29,7 +29,7 @@ Abonat::~Abonat()
 void Abonat::show()
 {
   std::cout << "Persoana '" << nume << "' are ID-ul " << id << std::endl;
-  std::cout << "Fiind Abonat Skype, are nr. telefon " << this->nr_telefon << '\n';
+  std::cout << "Fiind Abonat, are nr. telefon " << nr_telefon << std::endl;
 }
 
 std::string Abonat::getName()
@@ -76,7 +76,7 @@ std::istream& operator>>(std::istream& stream, Abonat& obj)
 std::ostream& operator<<(std::ostream& stream, const Abonat& obj)
 {
   stream << "Persoana '"<< obj.nume << "' are ID-ul " << obj.id << std::endl;
-  stream << "Fiind Abonat Skype, are nr. telefon " << obj.nr_telefon << std::endl;
+  stream << "Fiind Abonat, are nr. telefon " << obj.nr_telefon << std::endl;
 
   return stream;
 }
