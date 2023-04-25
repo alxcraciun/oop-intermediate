@@ -9,12 +9,11 @@ protected:
 
 public:
   Persoana();
-  Persoana(int id, const std::string other_nume);
+  Persoana(int other_id, const std::string other_nume);
   Persoana(const Persoana& other);
   virtual ~Persoana();
 
   Persoana& operator=(const Persoana& other);
-
   friend std::istream& operator>>(std::istream& stream, Persoana& obj);
   friend std::ostream& operator<<(std::ostream& stream, const Persoana& obj);
 };

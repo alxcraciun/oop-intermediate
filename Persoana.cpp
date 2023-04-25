@@ -1,11 +1,11 @@
-#include "Persoana.h"
+#include "include/Persoana.h"
 
 Persoana::Persoana() {}
 
-Persoana::Persoana(int id, const std::string nume)
+Persoana::Persoana(int other_id, const std::string other_nume)
 {
-  this->id = id;
-  this->nume = nume;
+  id = other_id;
+  nume = other_nume;
 }
 
 Persoana::Persoana(const Persoana& other)
