@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 
-class Persoana {
+class Persoana
+{
+protected:
   int id;
   std::string nume;
 
@@ -13,6 +15,6 @@ public:
 
   Persoana &operator=(const Persoana &other);
 
-  friend std::istream &operator>>(std::istream &in, Persoana &persoana);
-  friend std::ostream &operator<<(std::ostream &out, const Persoana &persoana);
+  friend std::istream &operator>>(std::istream &in, Persoana &obj);
+  friend std::ostream &operator<<(std::ostream &out, const Persoana &obj);
 };
