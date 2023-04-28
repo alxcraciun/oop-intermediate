@@ -3,7 +3,6 @@
 #include "include/Abonat_Skype_Romania.h"
 #include "include/Agenda.h"
 #include "include/Persoana.h"
-#include <iostream>
 
 std::string open;
 int input;

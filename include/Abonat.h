@@ -1,6 +1,5 @@
 #pragma once
 #include "Persoana.h"
-#include <typeinfo>
 
 class Abonat : public Persoana
 {

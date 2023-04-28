@@ -4,8 +4,8 @@
 #include "Abonat_Skype_Extern.h"
 #include "Abonat_Skype_Romania.h"
 #include "Persoana.h"
-#include <iostream>
 #include <vector>
+#include <memory>
 
 class Agenda
 {
