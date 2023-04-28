@@ -11,8 +11,8 @@ class Agenda
 {
 private:
   static int nr_abonati;
-  std::vector<Abonat*> lista_abonati;
-  // std::vector <std::unique_ptr<Abonat>> lista_abonati;
+  // std::vector<Abonat*> lista_abonati;
+  std::vector <std::shared_ptr<Abonat>> lista_abonati;
 
 public:
   Agenda();
