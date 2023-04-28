@@ -13,7 +13,9 @@ int Agenda::nr_abonati = 0;
 int main()
 {
   std::cout << "Intra in aplicatie? Y/N\n";
-  while (std::cin >> open)
+  std::cin >> open;
+
+  while (true)
   {
     if (open == "N")
     {
@@ -23,6 +25,7 @@ int main()
     else if (open != "Y")
     {
       std::cout << "Optiune invalida. Apasati doar tasta 'Y' sau 'N'\n";
+      std::cin >> open;
       continue;
     }
 
@@ -124,7 +127,8 @@ int main()
     }
     }
 
-    std::cout << "Doriti sa continuati? Y/N\n";
+    std::cout << "\nDoriti sa continuati? Y/N\n";
+    std::cin >> open;
   }
 
   return 0;
