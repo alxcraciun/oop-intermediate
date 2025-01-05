@@ -1,7 +1,8 @@
 UseTab: Never
-IndentWidth: 2
+IndentWidth: 4
 PointerAlignment: Left
 BreakBeforeBraces: Allman
 AllowShortIfStatementsOnASingleLine: false
 IndentCaseLabels: false
 ColumnLimit: 0
+AccessModifierOffset: -4
